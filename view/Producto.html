@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/producto.css" />
+    <script src="../dto/producto.js"></script>
+    <script src="../locator/locator.js"></script>
+    <script src="../view/Producto.js"></script>
+    <title>ventas</title>
+  </head>
+  <body onload="getAll()">
+    <form>
+      <label>SKU:</label>
+      <input type="number" name="sku" id="sku" min="1" max="10000" step="1" />
+      <label>Producto:</label>
+      <input type="text" name="dsproducto" id="dsproducto" />
+
+      <input class="button" type="button" value="Guardar" onclick="insert()" />
+      <input
+        class="button"
+        type="button"
+        value="Actualizar"
+        onclick="insert()"
+      />
+      <!-- <input class="button" type="button" value="Actualizar" onclick="insert()" />
+      <input class="button" type="button" value="Borrar" onclick="insert()" /> -->
+
+      <button class="botton" onclick="delet()">Borrar</button>
+    </form>
+
+    <div>
+      <table class="table" id="lista_producto">
+        <thead>
+          <tr>
+            <th>codigo</th>
+            <th>producto</th>
+          </tr>
+        </thead>
+        <tbody
+          style="margin-top: 5%; text-align: center"
+          id="lista_producto_body"
+        ></tbody>
+      </table>
+    </div>
+  </body>
+</html>

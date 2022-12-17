@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/producto.css" />
-    <script src="../dto/producto.js"></script>
-    <script src="../locator/locator.js"></script>
-    <script src="../view/Producto.js"></script>
+    <script src="../dto/vendedor.js"></script>
+    <script src="../locator/locatorVendedor.js"></script>
+    <script src="../view/Vendedor.js"></script>
     <title>ventas</title>
   </head>
   <body onload="getAll()">
@@ -30,11 +30,24 @@
       </div>
     </header>
     <form>
-      <label>SKU:</label>
-      <input type="number" name="sku" id="sku" min="1" max="10000" step="1" />
-      <label>Producto:</label>
-      <input type="text" name="dsproducto" id="dsproducto" />
-
+      <label>NmVendedor</label>
+      <input
+        type="number"
+        name="nmvendedor"
+        id="nmvendedor"
+        min="0"
+        max="10000"
+        step="1"
+      />
+      <label>Documento:</label>
+      <input type="text" name="documento" id="documento" />
+      <label>Nombres:</label>
+      <input type="text" name="dsnombres" id="dsnombres" />
+      <label>Apellidos:</label>
+      <input type="text" name="desapellido" id="desapellidos" />
+      <label>Dirección:</label>
+      <input type="text" name="dsdireccion" id="dsdireccion" />
+      <!-- Botones acciones -->
       <input class="button" type="button" value="Guardar" onclick="insert()" />
       <input
         class="button act"
@@ -42,16 +55,23 @@
         value="Actualizar"
         onclick="insert()"
       />
-
-      <button class="button bor" onclick="delet()">Borrar</button>
+      <input
+        class="button bor"
+        type="button"
+        value="Borrar"
+        onclick="delet()"
+      />
     </form>
 
     <div class="tableCSS">
       <table class="table" id="lista_producto">
         <thead>
           <tr>
-            <th>codigo</th>
-            <th>producto</th>
+            <th>NmVendedor</th>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
           </tr>
         </thead>
         <tbody

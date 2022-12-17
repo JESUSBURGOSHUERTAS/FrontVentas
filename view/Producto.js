@@ -1,11 +1,17 @@
 //Funciones que pasan al html
 var locatorproducto = new locator();
 async function insert() {
+  // Aqui traemos el numero que contiene el primer input
   let sku = document.getElementById("sku").value;
+  // Aqui traemos el numero que contiene el segundo input
   let dsproducto = document.getElementById("dsproducto").value;
+
   let Producto = new producto(sku, dsproducto);
   console.log(Producto);
+  //Crea una nueva instancia de la clase "locator" y la almacena en la
+  //variable "locatorproducto".
   let result = await locatorproducto.save(Producto);
+  /*Ejecuta el método "save" en "locatorproducto" y le pasa la instancia de la clase "Producto" como argumento. El resultado de la ejecución del método se almacena en la variable "result". */
 
   getAll();
 }

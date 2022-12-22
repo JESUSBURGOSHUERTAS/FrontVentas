@@ -1,4 +1,4 @@
-class precio {
+class precioDTO {
   constructor(nmprecio, sku, precio, fedesde, fehasta) {
     this.nmprecio = nmprecio;
     this.sku = sku;

@@ -1,48 +1,48 @@
 //Funciones que pasan al html
-var locatorpr = new LocatorPre();
+var locatorm = new locatorPrecio();
 async function insert() {
   // Aqui traemos el numero que contiene el primer input
   let nmprecio = document.getElementById("nmprecio").value;
   // Aqui traemos el numero que contiene el segundo input
   let sku = document.getElementById("sku").value;
 
-  let precio = document.getElementById("precio").value;
+  let preciobyid = document.getElementById("precio").value;
   let fedesde = document.getElementById("fedesde").value;
   let fehasta = document.getElementById("fehasta").value;
 
-  let Precio = new precio(nmprecio, sku, precio, fedesde, fehasta);
-  console.log(Precio);
+  let Precioss = new precioDTO(nmprecio, sku, preciobyid, fedesde, fehasta);
+  console.log(Precioss);
   //Crea una nueva instancia de la clase "locator" y la almacena en la
   //variable "locatorproducto".
-  let result = await locatorpr.save(Vendedor);
+  let result = await locatorm.save(Precioss);
   /*Ejecuta el método "save" en "locatorproducto" y le pasa la instancia de la clase "Producto" como argumento. El resultado de la ejecución del método se almacena en la variable "result". */
 
   getAll();
 }
 
 async function update() {
-  let nmvendedor = document.getElementById("nmvendedor").value;
+  let nmprecio = document.getElementById("nmprecio").value;
   let sku = document.getElementById("sku").value;
-  let precio = document.getElementById("precio").value;
+  let preciobyid = document.getElementById("precio").value;
   let fedesde = document.getElementById("fedesde").value;
   let fehasta = document.getElementById("fehasta").value;
 
-  let Precio = new precio(nmprecio, sku, precio, fedesde, fehasta);
-  console.log(Precio);
-  let result = await locatorpr.update(Precio);
+  let Precioss = new precioDTO(nmprecio, sku, preciobyid, fedesde, fehasta);
+  console.log(Precioss);
+  let result = await locatorm.update(Precioss);
   console.log(result);
 }
 
 async function delet() {
   let nmprecio = document.getElementById("nmprecio").value;
-  let Precio = new precio(nmprecio);
-  console.log(Precio);
-  let result = await locatorpr.delet(Precio);
+  let Precioss = new precioDTO(nmprecio);
+  console.log(Precioss);
+  let result = await locatorm.delet(Precioss);
 }
 
 async function getAll() {
   // let producto = new Producto(nmvendedor,sku);
-  let ressult = await locatorpr.getAll();
+  let ressult = await locatorm.getAll();
   let data = ressult.data;
 
   addTable(data);

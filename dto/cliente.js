@@ -1,18 +1,18 @@
-class vendedor {
-  constructor(nmvendedor, documento, dsnombres, desapellidos, dsdireccion) {
-    this.nmvendedor = nmvendedor;
+class cliente {
+  constructor(nmcliente, documento, dsnombres, dsapellidos, dsdireccion) {
+    this.nmcliente = nmcliente;
     this.documento = documento;
     this.dsnombres = dsnombres;
-    this.desapellidos = desapellidos;
+    this.dsapellidos = dsapellidos;
     this.dsdireccion = dsdireccion;
   }
 
-  setNmvendedor(nmvendedor) {
-    this.nmvendedor = nmvendedor;
+  setNmcliente(nmcliente) {
+    this.nmcliente = nmcliente;
   }
 
-  getNmvendedor(nmvendedor) {
-    return this.nmvendedor;
+  getNmcliente(nmcliente) {
+    return this.nmcliente;
   }
 
   setDocumento(documento) {
@@ -30,12 +30,12 @@ class vendedor {
   getDsnombres(dsnombres) {
     return this.dsnombres;
   }
-  setDesapellidos(desapellidos) {
-    this.desapellidos = desapellidos;
+  setDsapellidos(dsapellidos) {
+    this.dsapellidos = dsapellidos;
   }
 
-  getDesapellidos(desapellidos) {
-    return this.desapellidos;
+  getDsapellidos(dsapellidos) {
+    return this.dsapellidos;
   }
   setDsdireccion(dsdireccion) {
     this.dsdireccion = dsdireccion;

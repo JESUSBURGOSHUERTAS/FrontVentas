@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/producto.css" />
-    <script src="../dto/cliente.js"></script>
-    <script src="../locator/locatorCliente.js"></script>
-    <script src="../view/Cliente.js"></script>
+    <script src="../dto/precio.js"></script>
+    <script src="../locator/LocatorPre.js"></script>
+    <script src="../view/Precio.js"></script>
     <title>ventas</title>
   </head>
   <body onload="getAll()">
@@ -30,23 +30,23 @@
       </div>
     </header>
     <form>
-      <label>NmCliente</label>
+      <label>NmPrecio</label>
       <input
         type="number"
-        name="nmcliente"
-        id="nmcliente"
+        name="nmprecio"
+        id="nmprecio"
         min="0"
         max="10000"
         step="1"
       />
-      <label>Documento:</label>
-      <input type="text" name="documento" id="documento" />
-      <label>Nombres:</label>
-      <input type="text" name="dsnombres" id="dsnombres" />
-      <label>Apellidos:</label>
-      <input type="text" name="dsapellidos" id="dsapellidos" />
-      <label>Dirección:</label>
-      <input type="text" name="dsdireccion" id="dsdireccion" />
+      <label>Sku:</label>
+      <input type="text" name="sku" id="sku" />
+      <label>Precio:</label>
+      <input type="text" name="precio" id="precio" />
+      <label>Fedesde:</label>
+      <input type="text" name="fedesde" id="fedesde" />
+      <label>Fehasta:</label>
+      <input type="text" name="fehasta" id="fehasta" />
       <!-- Botones acciones -->
       <input class="button" type="button" value="Guardar" onclick="insert()" />
       <input
@@ -67,11 +67,11 @@
       <table class="table" id="lista_producto">
         <thead>
           <tr>
-            <th>NmCliente</th>
-            <th>Documento</th>
-            <th>Nombres</th>
-            <th>Apellidos</th>
-            <th>Dirección</th>
+            <th>NmPrecio</th>
+            <th>Sku</th>
+            <th>Precio</th>
+            <th>Fedesde</th>
+            <th>Fehasta</th>
           </tr>
         </thead>
         <tbody

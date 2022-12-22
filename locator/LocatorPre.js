@@ -1,17 +1,17 @@
 //conexion entre los metodos POST/GET etc.. de Springboot al front  (Backend->Front)
-class locatorVendedor {
+class locatorPre {
   constructor() {}
-  async save(vendedor) {
+  async save(precio) {
     let result = null;
 
-    console.log(JSON.stringify(vendedor));
+    console.log(JSON.stringify(precio));
     try {
-      let response = await fetch("http://localhost:8080/api/vendedor/save", {
+      let response = await fetch("http://localhost:8080/api/precio/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-        body: JSON.stringify(vendedor),
+        body: JSON.stringify(precio),
       });
 
       result = await response.json();
@@ -24,7 +24,7 @@ class locatorVendedor {
   async getAll() {
     let result = null;
     try {
-      let response = await fetch("http://localhost:8080/api/vendedor/getall", {
+      let response = await fetch("http://localhost:8080/api/precio/getall", {
         method: "GET",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -39,16 +39,16 @@ class locatorVendedor {
     return result;
   }
 
-  async delet(vendedor) {
+  async delet(precio) {
     let result = null;
 
     try {
-      let response = await fetch("http://localhost:8080/api/vendedor/delete", {
+      let response = await fetch("http://localhost:8080/api/precio/delete", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-        body: JSON.stringify(vendedor),
+        body: JSON.stringify(precio),
       });
 
       result = await response.json();

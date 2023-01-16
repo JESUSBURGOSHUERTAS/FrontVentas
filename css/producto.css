@@ -22,7 +22,7 @@ a {
 /** Header **/
 
 .header {
-  height: 13rem;
+  height: 14rem;
   background-size: cover; /*toma todo el espacio disponible*/
   background-repeat: no-repeat;
   background-position: center center; /*centrar imagen verticalmente y horizontalmente*/
